@@ -11,11 +11,10 @@ module ClashCards {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
-    // requires eu.hansolo.tilesfx;
-    // requires eu.hansolo.fx.countries;
-    // requires eu.hansolo.fx.heatmap;
-    // requires eu.hansolo.toolbox;
 
     opens UI to javafx.fxml;
+    opens CORE to javafx.fxml;
+    
     exports UI;
+    exports CORE;
 }

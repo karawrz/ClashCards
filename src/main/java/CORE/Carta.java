@@ -120,6 +120,11 @@ public abstract class Carta {
         Campeao
     }
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
     public enum enumVelocidade{
         Lenta,
         Media,

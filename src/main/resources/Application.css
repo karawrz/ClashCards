@@ -1,0 +1,35 @@
+
+.root-pane {
+    -fx-background-color: royalblue;
+    -fx-background-image: url('images/fundoArena.jpg');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+.label {
+    -fx-font-family: "Roboto";
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.button {
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.titulo {
+    -fx-font-family : "Roboto";
+    -fx-font-size : 85px;
+    -fx-font-weight : 900;
+    -fx-text-fill : white;
+    -fx-alignment : center;
+}
+
+.choice-box{
+    -fx-font-size: 15px;
+    -fx-text-fill: black;
+}
+
+.choice-box .label {
+ -fx-text-fill: black;
+ }
