@@ -3,13 +3,16 @@ package CORE;
 import java.util.ArrayList;
 
 public class Deck {
+    public static final int MAXIMO = 8;
     private String nomeDeck;
-    ArrayList<Carta> cartasDeck = new ArrayList<>();
+    ArrayList<Carta> cartasDeck = new ArrayList<>();  //lista de cartas do deck
 
+    //Construtor
     public Deck(String nomeDeck){
         this.nomeDeck = nomeDeck;
     }
 
+    //Getters e Setters
     public String getNomeDeck() {
         return nomeDeck;
     }
@@ -25,12 +28,14 @@ public class Deck {
     }
 
     public void AddCarta(Carta carta){
-        if(cartasDeck.size() == 8){
-            System.out.println("O deck " + nomeDeck +" já está cheio");
+        if(cartasDeck.size() >= MAXIMO){
+            System.out.println("O deck " + nomeDeck +" já está cheio, máximo de "+ MAXIMO +" cartas.");
+
         } else if (cartasDeck.contains(carta)) {
-            System.out.println("Carta repetida");
+            System.out.println("Carta repetida, a carta " + carta.getNome() + " já está no deck");
+
         }else {
-            cartasDeck.add(carta);
+            this.cartasDeck.add(carta);
         }
     }
 
@@ -38,13 +43,26 @@ public class Deck {
         cartasDeck.remove(carta);
     }
 
-    public double custoMedio(Deck deck){
-        double custo = 0;
-        for (int i = 0; i < deck.cartasDeck.size(); i++){
-            custo += deck.cartasDeck.get(i).getCusto();
+    //calcula custo médio de elixir do deck
+    public double custoMedio(){
+        double custo = 0.0;
+        for (Carta carta : cartasDeck) {
+            custo += carta.getCusto();                  //calcula custo total das cartas
         }
-        return custo / (double)deck.cartasDeck.size();
+        if(cartasDeck.size() == 0) return 0.0;
+        return custo / (double)cartasDeck.size();  //divide custo total pela quantidade de cartas
     }
 
+    //toString
+    @Override
+    public String toString() {
+        String estado;
+
+        if(cartasDeck.size() == MAXIMO) estado = "Cheio";
+        else if(cartasDeck.size() == 0) estado = "Vazio";
+        else estado = "Incompleto";
+
+        return String.format("%s (Status: %s) - Média de Elixir: %.2f", nomeDeck, estado, custoMedio());
+    }
 
 }

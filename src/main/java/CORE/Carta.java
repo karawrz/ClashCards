@@ -2,7 +2,38 @@ package CORE;
 
 import javafx.scene.image.Image;
 
-public abstract class Carta {
+public class Carta {
+
+    //Enums
+    public enum enumRaridade{
+        Comum,
+        Rara,
+        Epica,
+        Lendaria,
+        Campeao
+    }
+
+    public enum enumVelocidade{
+        Lenta,
+        Media,
+        Rapida,
+        MuitoRapida
+    }
+
+    public enum enumAlvos{
+        Aereo,
+        Terrestre,
+        Construção,
+    }
+
+    public enum enumAlcance{
+        fisicoProximo,
+        fisicoMedio,
+        fisicoLongo,
+        projetil
+    }
+
+    //Atributos com encapsulamento
     private String nome; //nome da carta
     private String raridade; //raridade (comum, rara, epica, lendária, campeão)
     private String velocidade; //(lenta, média, rápida, muito rápida )
@@ -16,9 +47,10 @@ public abstract class Carta {
     private double velocidadeImpacto; //(em segundos)
     private Image imagem; //(imagem da carta, fazer prontas ou carregar mais)
 
-    public void Carta(String nome, String raridade, String velocidade, String alvos,
-                      int nivel, int custo, int dano, int vida, double danoPS, double alcance,
-                      double velocidadeImpacto, Image imagem) {
+    //Construtor
+    public Carta(String nome, String raridade, String velocidade, String alvos,
+                 int nivel, int custo, int dano, int vida, double danoPS, double alcance,
+                 double velocidadeImpacto, Image imagem) {
         this.nome = nome;
         this.raridade = raridade;
         this.velocidade = velocidade;
@@ -33,8 +65,7 @@ public abstract class Carta {
         this.imagem = imagem;
     }
 
-
-
+    //Getters e Setters
     public Image getImagem() {
         return imagem;
     }
@@ -112,37 +143,17 @@ public abstract class Carta {
         this.raridade = raridade;
     }
 
-    public enum enumRaridade{
-        Comum,
-        Rara,
-        Epica,
-        Lendaria,
-        Campeao
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
+    //toString
     @Override
     public String toString() {
-        return super.toString();
-    }
-
-    public enum enumVelocidade{
-        Lenta,
-        Media,
-        Rapida,
-        MuitoRapida
-    }
-
-    public enum enumAlvos{
-        Aereo,
-        Terrestre,
-        Construção,
-    }
-
-    public enum enumAlcance{
-        fisicoProximo,
-        fisicoMedio,
-        fisicoLongo,
-        projetil
+        return String.format("%s (Nível %d) - Custo: %d Elixir | Alcance: %s | Raridade: %s",  nome, nivel, custo, alcance, raridade);
     }
 
 }

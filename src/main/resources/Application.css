@@ -7,7 +7,7 @@
 }
 
 .label {
-    -fx-font-family: "Roboto";
+    -fx-font-family: "fantasy";
     -fx-text-fill: white;
     -fx-font-size: 18px;
 }
@@ -18,11 +18,11 @@
 }
 
 .titulo {
-    -fx-font-family : "Roboto";
-    -fx-font-size : 85px;
+    -fx-font-family : "Arial Black";
+    -fx-font-size : 65px;
     -fx-font-weight : 900;
-    -fx-text-fill : white;
-    -fx-alignment : center;
+    -fx-text-fill : yellow;
+    -fx-alignment : top_center;
 }
 
 .choice-box{
@@ -31,5 +31,9 @@
 }
 
 .choice-box .label {
- -fx-text-fill: black;
+    -fx-text-fill: black;
+ }
+
+ .top-container{
+    -fx-background-color: lightblue;
  }
