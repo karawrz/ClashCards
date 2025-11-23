@@ -47,7 +47,7 @@ public class Deck {
     public double custoMedio(){
         double custo = 0.0;
         for (Carta carta : cartasDeck) {
-            custo += carta.getCusto();                  //calcula custo total das cartas
+            custo += carta.getCusto();              //calcula custo total das cartas
         }
         if(cartasDeck.size() == 0) return 0.0;
         return custo / (double)cartasDeck.size();  //divide custo total pela quantidade de cartas
