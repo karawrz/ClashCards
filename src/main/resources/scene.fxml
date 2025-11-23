@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="-1.0" minHeight="0.0" minWidth="0.0" prefHeight="191.0" prefWidth="210.0">
+         <children>
+            <ImageView fitHeight="609.0" fitWidth="1200.0" pickOnBounds="true">
+               <image>
+                  <Image url="@fundoArena.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="48.0" layoutX="7.0" layoutY="-14.0" strokeType="INSIDE" strokeWidth="6.0" width="1186.0">
+               <fill>
+                  <RadialGradient centerX="0.5" centerY="0.8222748815165877" radius="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color green="0.45614033937454224" blue="0.8552631735801697" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <stroke>
+                  <RadialGradient centerX="0.5359116022099448" centerY="0.48578199052132703" radius="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color green="0.45614033937454224" blue="0.8552631735801697" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+            </Rectangle>
+            <HBox alignment="CENTER" layoutY="-3.0" prefHeight="37.0" prefWidth="1206.0" spacing="500.0">
+               <children>
+                  <Label prefHeight="37.0" prefWidth="169.0" text="COLECAO" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Rockwell Extra Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="566.0" layoutY="14.0" prefHeight="37.0" prefWidth="108.0" text="DECKS" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font name="Rockwell Extra Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="684.0" layoutY="63.0" prefHeight="140.0" prefWidth="446.0" spacing="8.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="3.0" width="111.0">
+                     <fill>
+                        <LinearGradient endX="0.42654028436018954" endY="1.0" startX="0.5118483412322276">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.04507797211408615" green="0.08925438672304153" blue="0.4868420958518982" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <RadialGradient centerX="0.5193370165745856" centerY="0.9644549763033176" radius="0.8275862068965517">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.087248322147651">
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="3.0" width="111.0">
+                     <fill>
+                        <LinearGradient endX="0.42654028436018954" endY="1.0" startX="0.5118483412322276">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.04507797211408615" green="0.08925438672304153" blue="0.4868420958518982" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <RadialGradient centerX="0.5193370165745856" centerY="0.9644549763033176" radius="0.8275862068965517">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.087248322147651">
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="3.0" width="111.0">
+                     <fill>
+                        <LinearGradient endX="0.42654028436018954" endY="1.0" startX="0.5118483412322276">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.04507797211408615" green="0.08925438672304153" blue="0.4868420958518982" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <RadialGradient centerX="0.5193370165745856" centerY="0.9644549763033176" radius="0.8275862068965517">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.087248322147651">
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="3.0" width="111.0">
+                     <fill>
+                        <LinearGradient endX="0.42654028436018954" endY="1.0" startX="0.5118483412322276">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.04507797211408615" green="0.08925438672304153" blue="0.4868420958518982" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <RadialGradient centerX="0.5193370165745856" centerY="0.9644549763033176" radius="0.8275862068965517">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.087248322147651">
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                  </Rectangle>
+               </children>
+            </HBox>
+            <HBox layoutX="684.0" layoutY="216.0" prefHeight="140.0" prefWidth="446.0" spacing="8.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="3.0" width="111.0">
+                     <fill>
+                        <LinearGradient endX="0.42654028436018954" endY="1.0" startX="0.5118483412322276">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.04507797211408615" green="0.08925438672304153" blue="0.4868420958518982" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <RadialGradient centerX="0.5193370165745856" centerY="0.9644549763033176" radius="0.8275862068965517">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.087248322147651">
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="3.0" width="111.0">
+                     <fill>
+                        <LinearGradient endX="0.42654028436018954" endY="1.0" startX="0.5118483412322276">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.04507797211408615" green="0.08925438672304153" blue="0.4868420958518982" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <RadialGradient centerX="0.5193370165745856" centerY="0.9644549763033176" radius="0.8275862068965517">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.087248322147651">
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="3.0" width="111.0">
+                     <fill>
+                        <LinearGradient endX="0.42654028436018954" endY="1.0" startX="0.5118483412322276">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.04507797211408615" green="0.08925438672304153" blue="0.4868420958518982" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <RadialGradient centerX="0.5193370165745856" centerY="0.9644549763033176" radius="0.8275862068965517">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.087248322147651">
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                  </Rectangle>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="3.0" width="111.0">
+                     <fill>
+                        <LinearGradient endX="0.42654028436018954" endY="1.0" startX="0.5118483412322276">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.04507797211408615" green="0.08925438672304153" blue="0.4868420958518982" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <RadialGradient centerX="0.5193370165745856" centerY="0.9644549763033176" radius="0.8275862068965517">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.087248322147651">
+                                 <color>
+                                    <Color red="0.17592592537403107" green="0.4918209910392761" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                  </Rectangle>
+               </children>
+            </HBox>
+            <HBox layoutX="684.0" layoutY="372.0" prefHeight="29.0" prefWidth="469.0">
+               <children>
+                  <AnchorPane prefHeight="74.0" prefWidth="22.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="43.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="3.0" width="469.0">
+                           <fill>
+                              <RadialGradient centerX="0.5193370165745856" radius="0.8275862068965517">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.04507797211408615" green="0.08925438672304153" blue="0.4868420958518982" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </fill>
+                           <stroke>
+                              <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.6445497630331752">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.006711409395973154">
+                                       <color>
+                                          <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.18000000715255737" green="0.5080000162124634" blue="1.0" opacity="0.7786259651184082" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </stroke>
+                        </Rectangle>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="28.0" layoutX="8.0" layoutY="7.0" stroke="#010022c7" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="3.0" width="72.0">
+                           <fill>
+                              <RadialGradient centerX="0.5193370165745856" radius="0.8275862068965517">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color green="0.04605263099074364" blue="0.18421052396297455" opacity="0.699999988079071" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.021381579339504242" green="0.058799341320991516" blue="0.17105263471603394" opacity="0.699999988079071" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </fill>
+                        </Rectangle>
+                        <ImageView fitHeight="41.0" fitWidth="27.0" layoutX="7.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../ClashCards/src/main/resources/UI/elixir.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust hue="-0.59" />
+                           </effect>
+                        </ImageView>
+                        <TextFlow layoutX="34.0" layoutY="10.0" prefHeight="23.0" prefWidth="41.0" textAlignment="CENTER" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <ScrollPane layoutX="62.0" layoutY="63.0" prefHeight="500.0" prefWidth="541.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="542.0" style="-fx-background-color: lightblue;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </AnchorPane>
+              </content>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ScrollPane>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </AnchorPane>
+   </children>
+</AnchorPane>
