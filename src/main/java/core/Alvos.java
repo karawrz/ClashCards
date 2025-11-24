@@ -1,4 +1,4 @@
-package CORE;
+package core;
 
 public enum Alvos{
     Aereo,

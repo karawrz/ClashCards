@@ -1,10 +1,10 @@
-package CORE;
+package core;
 
-import static CORE.Alcance.projetil;
-import static CORE.Alvos.Terrestre;
-import static CORE.Raridade.*;
-import static CORE.Velocidade.Lenta;
-import static CORE.Velocidade.Media;
+import static core.Alcance.projetil;
+import static core.Alvos.Terrestre;
+import static core.Raridade.*;
+import static core.Velocidade.Lenta;
+import static core.Velocidade.Media;
 
 public class Teste {
 

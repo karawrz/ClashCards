@@ -1,7 +1,5 @@
-package UI;
+package ui;
 
-import CORE.Carta;
-import CORE.Deck;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

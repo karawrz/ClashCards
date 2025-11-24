@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" styleClass="menu-layout" stylesheets="@../css/Application.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" styleClass="menu-layout" stylesheets="@../css/Application.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MenuController">
    <children>
       <HBox alignment="CENTER" layoutX="200.0" layoutY="444.0" prefHeight="100.0" prefWidth="800.0" spacing="30.0">
          <children>
-            <Button mnemonicParsing="false" styleClass="menu-buttons" stylesheets="@../css/Application.css" text="Coleção">
+            <Button mnemonicParsing="false" onAction="#mudarParaColecao" styleClass="menu-buttons" stylesheets="@../css/Application.css" text="Coleção">
                <font>
                   <Font name="Blackadder ITC" size="41.0" />
                </font>

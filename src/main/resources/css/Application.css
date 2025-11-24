@@ -25,3 +25,34 @@
     -fx-background-color: darkgoldenrod;
     -fx-text-fill: white;
 }
+
+.cartas-tela-layout {
+    -fx-background-color: royalblue;
+    -fx-background-image: url("../images/fundoArena.jpg");
+    -fx-background-size: cover;
+}
+
+.voltar-layout {
+   -fx-pref-width: 100px;
+   -fx-pref-height: 55px;
+   -fx-background-radius: 25px;
+   -fx-font-size: 12px;
+   -fx-border-color: gold;
+    -fx-border-radius: 20px;
+    -fx-border-width: 8px;
+    -fx-font-family: "SuperCell-Magic";
+    -fx-background-color: darkgoldenrod;
+    -fx-text-fill: white;
+}
+
+.title {
+    -fx-font-family: "SuperCell-Magic";
+    -fx-font-size: 38px;
+    -fx-text-fill: white;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background : transparent;
+    -fx-border-color: transparent;
+}

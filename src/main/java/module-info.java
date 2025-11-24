@@ -14,9 +14,9 @@ module ClashCards {
     requires com.opencsv;
     requires javafx.graphics;
 
-    opens UI to javafx.fxml;
-    opens CORE to javafx.fxml;
+    opens ui to javafx.fxml;
+    opens core to javafx.fxml;
     
-    exports UI;
-    exports CORE;
+    exports ui;
+    exports core;
 }
