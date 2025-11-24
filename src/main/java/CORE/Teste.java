@@ -1,5 +1,11 @@
 package CORE;
 
+import static CORE.Alcance.projetil;
+import static CORE.Alvos.Terrestre;
+import static CORE.Raridade.*;
+import static CORE.Velocidade.Lenta;
+import static CORE.Velocidade.Media;
+
 public class Teste {
 
     public static void main(String[] args) {
@@ -8,11 +14,11 @@ public class Teste {
         //TESTE CRIACAO DE CARTAS
         System.out.println("==== TESTE DE CRIACAO DE CARTAS ===");
 
-        Carta c1 = new Carta("Cavaleiro", "Comum", "Media", "Terrestre", 9, 3, 160, 1200, 100.0, 1.0, 1.2, null);
+        Carta c1 = new Carta("Cavaleiro", Comum, Media, Terrestre, 9, 3, 160, 1200, 100.0, projetil, 1.2, null);
 
-        Carta c2 = new Carta("Arqueira", "Comum", "Media", "Terrestre", 9, 3, 90, 250, 80.0, 5.0, 1.0, null);
+        Carta c2 = new Carta("Arqueira", Comum, Media, Terrestre, 9, 3, 90, 250, 80.0, projetil, 1.0, null);
 
-        Carta c3 = new Carta("P.E.K.K.A", "Epica", "Lenta", "Terrestre", 7, 7, 600, 3000, 300.0, 1.0, 1.8, null);
+        Carta c3 = new Carta("P.E.K.K.A", Epica, Lenta, Terrestre, 7, 7, 600, 3000, 300.0, projetil, 1.8, null);
 
         System.out.println("Carta 1: " + c1.toString());
         System.out.println("Carta 2: " + c2.toString());
@@ -33,15 +39,15 @@ public class Teste {
 
         // Teste do deck com cartas(3)
         System.out.println("\n==== TESTE ADICIONAR 3 CARTAS ===");
-        primeiroDeck.AddCarta(c1);
-        primeiroDeck.AddCarta(c2);
-        primeiroDeck.AddCarta(c3);
+        primeiroDeck.adicionarCarta(c1);
+        primeiroDeck.adicionarCarta(c2);
+        primeiroDeck.adicionarCarta(c3);
         System.out.println("Estado: " + primeiroDeck.toString());
 
         // Teste com repetidas
         System.out.println("\n==== TESTE DE CARTA REPETIDA ===");
         int tamanhoAntes = primeiroDeck.getCartasDeck().size();
-        primeiroDeck.AddCarta(c1);
+        primeiroDeck.adicionarCarta(c1);
         int tamanhoDepois = primeiroDeck.getCartasDeck().size();
 
         if (tamanhoAntes == tamanhoDepois) {
@@ -53,21 +59,21 @@ public class Teste {
         // Teste elixir medio
         System.out.println("\n==== TESTE DE ELIXIR MEDIO ===");
         double mediaEsperada = (3 + 3 + 7) / 3.0;
-        double mediaCalculada = primeiroDeck.custoMedio();
+        double mediaCalculada = primeiroDeck.getCustoMedio();
         System.out.printf("\nMédia de Elixir -> Esperada: %.2f | Calculada: %.2f%n", mediaEsperada, mediaCalculada);
 
         // Teste cheio
         System.out.println("\n==== TESTE DE CHEIO DO DECK ===");
         for (int i = 4; i <= 8; i++) {
-            Carta cExtra = new Carta("Carta " + i, "Comum", "Media", "Terrestre", 1, 2, 50, 50, 25.0, 1.0, 1.0, null);
-            primeiroDeck.AddCarta(cExtra);
+            Carta cExtra = new Carta("Carta " + i, Comum, Media, Terrestre, 1, 2, 50, 50, 25.0, projetil, 1.0, null);
+            primeiroDeck.adicionarCarta(cExtra);
         }
         System.out.println(primeiroDeck.toString());
 
         // Teste do limite
         System.out.println("\n==== TESTE DO LIMITE DE 8 CARTAS ===");
-        Carta cLimite = new Carta("Carta Extra", "Lendaria", "Media", "Terrestre", 1, 1, 10, 10, 10.0, 1.0, 1.0, null);
-        primeiroDeck.AddCarta(cLimite);
+        Carta cLimite = new Carta("Carta Extra", Lendaria, Media, Terrestre, 1, 1, 10, 10, 10.0, projetil, 1.0, null);
+        primeiroDeck.adicionarCarta(cLimite);
 
         if (primeiroDeck.getCartasDeck().size() == 8) {
             System.out.println(">> SUCESSO: O deck respeitou o limite de 8 cartas.");

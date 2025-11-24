@@ -1,18 +1,24 @@
 package UI;
 
 import CORE.Carta;
+import CORE.Deck;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class App extends Application {
 
+
     public void start(Stage stage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(App.class.getResource("scene.fxml"));
+        Font SuperCell = Font.loadFont(getClass().getResourceAsStream("/fonts/SuperCell-Magic.ttf"), 30);
+
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("/FXML/InicioMenu.fxml"));
+
         Parent root = loader.load();
         stage.setTitle("ClashCards");
         stage.setResizable(false);

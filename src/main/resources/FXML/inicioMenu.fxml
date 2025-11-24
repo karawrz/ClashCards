@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" styleClass="menu-layout" stylesheets="@../css/Application.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller">
+   <children>
+      <HBox alignment="CENTER" layoutX="200.0" layoutY="444.0" prefHeight="100.0" prefWidth="800.0" spacing="30.0">
+         <children>
+            <Button mnemonicParsing="false" styleClass="menu-buttons" stylesheets="@../css/Application.css" text="Coleção">
+               <font>
+                  <Font name="Blackadder ITC" size="41.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="167.0" styleClass="menu-buttons" stylesheets="@../css/Application.css" text="Decks">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="167.0" styleClass="menu-buttons" stylesheets="@../css/Application.css" text="Studio">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="167.0" styleClass="menu-buttons" stylesheets="@../css/Application.css" text="Créditos">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

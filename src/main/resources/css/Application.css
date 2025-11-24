@@ -1,0 +1,27 @@
+.root {
+    -fx-font-family: "SuperCell";
+    -fx-font-size: 50px;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+
+.menu-layout {
+    -fx-background-color: royalblue;
+    -fx-background-image: url("../images/fundoMenu.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.menu-buttons {
+    -fx-pref-width: 170px;
+    -fx-pref-height: 70px;
+    -fx-background-radius: 25px;
+    -fx-font-size: 18px;
+    -fx-border-color: gold;
+    -fx-border-radius: 20px;
+    -fx-border-width: 8px;
+    -fx-font-family: "SuperCell-Magic";
+    -fx-background-color: darkgoldenrod;
+    -fx-text-fill: white;
+}

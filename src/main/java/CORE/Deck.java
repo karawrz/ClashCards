@@ -3,22 +3,25 @@ package CORE;
 import java.util.ArrayList;
 
 public class Deck {
+
     public static final int MAXIMO = 8;
     private String nomeDeck;
-    ArrayList<Carta> cartasDeck = new ArrayList<>();  //lista de cartas do deck
+    private double custoMedio;
+
+    private ArrayList<Carta> cartasDeck = new ArrayList<>();  //lista de cartas do deck
 
     //Construtor
     public Deck(String nomeDeck){
         this.nomeDeck = nomeDeck;
+        this.custoMedio = 0.0;
     }
 
     //Getters e Setters
-    public String getNomeDeck() {
-        return nomeDeck;
-    }
-    public String setNomeDeck(String nomeDeck) {
-        return this.nomeDeck = nomeDeck;
-    }
+    public String getNomeDeck(){return nomeDeck;}
+    public void setNomeDeck(String nomeDeck) {this.nomeDeck = nomeDeck;}
+
+    public double getCustoMedio() {return custoMedio;}
+    public void setCustoMedio(double custoMedio) {this.custoMedio = custoMedio;}
 
     public ArrayList<Carta> getCartasDeck() {
         return cartasDeck;
@@ -27,7 +30,7 @@ public class Deck {
         this.cartasDeck = cartasDeck;
     }
 
-    public void AddCarta(Carta carta){
+    public void adicionarCarta(Carta carta){
         if(cartasDeck.size() >= MAXIMO){
             System.out.println("O deck " + nomeDeck +" já está cheio, máximo de "+ MAXIMO +" cartas.");
 
@@ -36,21 +39,31 @@ public class Deck {
 
         }else {
             this.cartasDeck.add(carta);
+            this.custoMedio += carta.getCusto();
         }
     }
 
     public void removeCarta(Carta carta){
-        cartasDeck.remove(carta);
+        if(cartasDeck.contains(carta)) {
+            cartasDeck.remove(carta);
+            this.custoMedio -= carta.getCusto();
+        }
     }
 
     //calcula custo médio de elixir do deck
-    public double custoMedio(){
-        double custo = 0.0;
-        for (Carta carta : cartasDeck) {
-            custo += carta.getCusto();              //calcula custo total das cartas
+    public void custoMedio(){
+        if(cartasDeck.isEmpty()) {
+            this.custoMedio= 0.0;
         }
-        if(cartasDeck.size() == 0) return 0.0;
-        return custo / (double)cartasDeck.size();  //divide custo total pela quantidade de cartas
+        else{
+            double soma = 0;
+
+            for(Carta carta : cartasDeck){
+                soma += carta.getCusto();
+            }
+
+            this.custoMedio = soma / cartasDeck.size();
+            }
     }
 
     //toString
@@ -59,10 +72,10 @@ public class Deck {
         String estado;
 
         if(cartasDeck.size() == MAXIMO) estado = "Cheio";
-        else if(cartasDeck.size() == 0) estado = "Vazio";
+        else if(cartasDeck.isEmpty()) estado = "Vazio";
         else estado = "Incompleto";
 
-        return String.format("%s (Status: %s) - Média de Elixir: %.2f", nomeDeck, estado, custoMedio());
+        return String.format("%s (Status: %s) - Média de Elixir: %.2f", nomeDeck, estado, custoMedio);
     }
 
 }

@@ -1,56 +1,28 @@
 package CORE;
 
-import javafx.scene.image.Image;
-
 public class Carta {
 
-    //Enums
-    public enum enumRaridade{
-        Comum,
-        Rara,
-        Epica,
-        Lendaria,
-        Campeao
-    }
-
-    public enum enumVelocidade{
-        Lenta,
-        Media,
-        Rapida,
-        MuitoRapida
-    }
-
-    public enum enumAlvos{
-        Aereo,
-        Terrestre,
-        Construção,
-    }
-
-    public enum enumAlcance{
-        fisicoProximo,
-        fisicoMedio,
-        fisicoLongo,
-        projetil
-    }
-
     //Atributos com encapsulamento
+
     private String nome; //nome da carta
-    private String raridade; //raridade (comum, rara, epica, lendária, campeão)
-    private String velocidade; //(lenta, média, rápida, muito rápida )
-    private String alvos; //(aereo, terrestre, construção, multiplos )
+    private Raridade raridade; //raridade (comum, rara, epica, lendária, campeão)
+    private Velocidade velocidade; //(lenta, média, rápida, muito rápida )
+    private Alvos alvos; //(aereo, terrestre, construção, multiplos )
     private int nivel; //(de 1 a 15)
     private int custo; //(de 1 a 9)
     private int dano; // (pontos de dano)
     private int vida; //(pontos de vida)
     private double danoPS; //(pontos de dano por segundo)
-    private double alcance;  //(fisico proximo, fisico medio, fisico longo, projetil(double))
+    private Alcance alcance;  //(fisico proximo, fisico medio, fisico longo, projetil)
     private double velocidadeImpacto; //(em segundos)
-    private Image imagem; //(imagem da carta, fazer prontas ou carregar mais)
+    private String imagem; //(imagem da carta, fazer prontas ou carregar mais)
+
+    public Carta(){}
 
     //Construtor
-    public Carta(String nome, String raridade, String velocidade, String alvos,
-                 int nivel, int custo, int dano, int vida, double danoPS, double alcance,
-                 double velocidadeImpacto, Image imagem) {
+    public Carta(String nome, Raridade raridade, Velocidade velocidade, Alvos alvos,
+                 int nivel, int custo, int dano, int vida, double danoPS, Alcance alcance,
+                 double velocidadeImpacto, String imagem) {
         this.nome = nome;
         this.raridade = raridade;
         this.velocidade = velocidade;
@@ -66,10 +38,10 @@ public class Carta {
     }
 
     //Getters e Setters
-    public Image getImagem() {
+    public String getImagem() {
         return imagem;
     }
-    public void setImagem(Image imagem) {
+    public void setImagem(String imagem) {
         this.imagem = imagem;
     }
 
@@ -80,10 +52,10 @@ public class Carta {
         this.velocidadeImpacto = velocidadeImpacto;
     }
 
-    public double getAlcance() {
+    public Alcance getAlcance() {
         return alcance;
     }
-    public void setAlcance(double alcance) {
+    public void setAlcance(Alcance alcance) {
         this.alcance = alcance;
     }
 
@@ -122,24 +94,24 @@ public class Carta {
         this.nivel = nivel;
     }
 
-    public String getAlvos() {
+    public Alvos getAlvos() {
         return alvos;
     }
-    public void setAlvos(String alvos) {
+    public void setAlvos(Alvos alvos) {
         this.alvos = alvos;
     }
 
-    public String getVelocidade() {
+    public Velocidade getVelocidade() {
         return velocidade;
     }
-    public void setVelocidade(String velocidade) {
+    public void setVelocidade(Velocidade velocidade) {
         this.velocidade = velocidade;
     }
 
-    public String getRaridade() {
+    public Raridade getRaridade() {
         return raridade;
     }
-    public void setRaridade(String raridade) {
+    public void setRaridade(Raridade raridade) {
         this.raridade = raridade;
     }
 
@@ -156,5 +128,23 @@ public class Carta {
         return String.format("%s (Nível %d) - Custo: %d Elixir | Alcance: %s | Raridade: %s",  nome, nivel, custo, alcance, raridade);
     }
 
+    public String[] toCVS(){ //array de string armazenado no csv
+        String[] string = new String[12];
+
+        string[0] = this.getNome();
+        string[1] = String.valueOf(this.getNivel());
+        string[2] = String.valueOf(this.getCusto());
+        string[3] = this.getRaridade().toString();
+        string[4] = this.getImagem();
+        string[5] = String.valueOf(this.getDano());
+        string[6] = String.valueOf(this.getDanoPS());
+        string[7] = String.valueOf(this.getVida());
+        string[8] = this.getAlvos().toString();
+        string[9] = this.getAlcance().toString();
+        string[10] = this.getVelocidade().toString();
+        string[11] = String.valueOf(this.getVelocidadeImpacto());
+
+        return string;
+    }
 }
 
