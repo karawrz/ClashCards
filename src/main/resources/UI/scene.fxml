@@ -463,7 +463,7 @@
                               <ColorAdjust hue="-0.59" />
                            </effect>
                         </ImageView>
-                        <Label layoutX="34.0" layoutY="11.0" prefHeight="20.0" prefWidth="39.0" textAlignment="CENTER" textFill="WHITE">
+                        <Label fx:id="custoMedioContainer" layoutX="34.0" layoutY="11.0" prefHeight="20.0" prefWidth="39.0" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Arial Black" size="11.0" />
                            </font>
