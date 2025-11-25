@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" styleClass="cartas-tela-layout" stylesheets="@../css/Application.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" styleClass="cartas-tela-layout" stylesheets="@../css/Application.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.CartasController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="60.0" layoutY="-4.0" strokeType="INSIDE" strokeWidth="8.0" width="1200.0">
          <fill>
@@ -56,16 +56,16 @@
       </Label>
       <HBox layoutX="120.0" layoutY="71.0" prefHeight="46.0" prefWidth="960.0" spacing="700.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#mudarParaColecao" prefHeight="55.0" prefWidth="138.0" styleClass="voltar-layout" text="voltar">
+            <Button mnemonicParsing="false" onAction="#trocarParaMenu" prefHeight="55.0" prefWidth="138.0" styleClass="voltar-layout" text="voltar">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
          </children>
       </HBox>
-      <ScrollPane fitToWidth="true" layoutX="112.0" layoutY="133.0" prefHeight="437.0" prefWidth="976.0">
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutX="112.0" layoutY="133.0" prefHeight="437.0" prefWidth="960.0" vbarPolicy="ALWAYS">
          <content>
-            <FlowPane fx:id="containerCartas" hgap="20.0" prefHeight="447.0" prefWidth="899.0" prefWrapLength="680.0" style="-fx-background-color: transparent;" styleClass="scroll-pane" vgap="20.0">
+            <FlowPane fx:id="containerCartas" hgap="20.0" prefHeight="684.0" prefWidth="942.0" prefWrapLength="680.0" style="-fx-background-color: transparent;" styleClass="scroll-pane" vgap="20.0">
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                </padding>

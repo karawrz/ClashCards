@@ -1,6 +1,6 @@
 .root {
-    -fx-font-family: "SuperCell";
-    -fx-font-size: 50px;
+    -fx-font-family: "SuperCell-Magic";
+    -fx-font-size: 14px;
     -fx-text-fill: white;
     -fx-text-alignment: center;
 }
@@ -11,6 +11,33 @@
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
+}
+
+.editor-layout {
+    -fx-background-color: royalblue;
+    -fx-background-image: url("../images/fundoEditor.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.label-layout {
+    -fx-font-family: "SuperCell-Magic";
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+}
+
+.editor-buttons {
+    -fx-pref-width: 180px;
+    -fx-pref-height: 50px;
+    -fx-background-color: royalblue;
+    -fx-font-size: 14px;
+    -fx-font-family: "SuperCell-Magic";
+    -fx-text-fill: white;
+    -fx-border-color: lightblue;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-width: 4px;
 }
 
 .menu-buttons {

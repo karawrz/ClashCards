@@ -13,6 +13,7 @@ module ClashCards {
     requires com.almasb.fxgl.all;
     requires com.opencsv;
     requires javafx.graphics;
+    requires javafx.base;
 
     opens ui to javafx.fxml;
     opens core to javafx.fxml;

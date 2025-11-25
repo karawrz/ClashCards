@@ -14,12 +14,12 @@
                   <Font name="Blackadder ITC" size="41.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="167.0" styleClass="menu-buttons" stylesheets="@../css/Application.css" text="Decks">
+            <Button mnemonicParsing="false" onAction="#mudarParaDecks" prefHeight="57.0" prefWidth="167.0" styleClass="menu-buttons" stylesheets="@../css/Application.css" text="Decks">
                <font>
                   <Font size="27.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="167.0" styleClass="menu-buttons" stylesheets="@../css/Application.css" text="Studio">
+            <Button mnemonicParsing="false" onAction="#mudarParaStudio" prefHeight="57.0" prefWidth="167.0" styleClass="menu-buttons" stylesheets="@../css/Application.css" text="Studio">
                <font>
                   <Font size="27.0" />
                </font>

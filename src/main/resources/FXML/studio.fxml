@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" styleClass="editor-layout" stylesheets="@../css/Application.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.StudioController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="60.0" layoutY="-4.0" strokeType="INSIDE" strokeWidth="8.0" width="1200.0">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.8222748815165877" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.45614033937454224" blue="0.8552631735801697" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+         <stroke>
+            <RadialGradient centerX="0.5359116022099448" centerY="0.48578199052132703" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.45614033937454224" blue="0.8552631735801697" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </stroke>
+      </Rectangle>
+      <Label alignment="CENTER" layoutX="453.0" layoutY="-1.0" prefHeight="32.0" prefWidth="295.0" styleClass="title" text="STUDIO" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Rockwell Extra Bold" size="38.0" />
+         </font>
+      </Label>
+      <HBox layoutX="120.0" layoutY="71.0" prefHeight="46.0" prefWidth="960.0" spacing="700.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#trocarParaMenu" prefHeight="55.0" prefWidth="138.0" styleClass="voltar-layout" text="voltar">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Pane layoutX="95.0" layoutY="136.0" prefHeight="424.0" prefWidth="1012.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="26.0" layoutY="26.0" prefHeight="90.0" prefWidth="960.0" spacing="70.0">
+               <children>
+                  <TextField fx:id="nomeTextField" prefHeight="50.0" prefWidth="180.0" promptText="Digite o Nome" styleClass="editor-buttons">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <ChoiceBox fx:id="raridadeChoiceBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="180.0" styleClass="editor-buttons" />
+                  <ChoiceBox fx:id="alcanceChoiceBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="editor-buttons" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" layoutX="26.0" prefHeight="40.0" prefWidth="960.0" spacing="70.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="180.0" styleClass="label-layout" text="NOME" />
+                  <Label alignment="CENTER" prefWidth="180.0" styleClass="label-layout" text="RARIDADE" />
+                  <Label alignment="CENTER" prefWidth="180.0" styleClass="label-layout" text="ALCANCE" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" layoutX="26.0" layoutY="103.0" prefHeight="40.0" prefWidth="960.0" spacing="70.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="180.0" styleClass="label-layout" text="VELOCIDADE" />
+                  <Label alignment="CENTER" prefWidth="180.0" styleClass="label-layout" text="ALVOS" />
+                  <Label alignment="CENTER" prefWidth="180.0" styleClass="label-layout" text="NÍVEL" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="26.0" layoutY="123.0" prefHeight="90.0" prefWidth="960.0" spacing="70.0">
+               <children>
+                  <ChoiceBox fx:id="velocidadeChoiceBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="180.0" styleClass="editor-buttons" />
+                  <ChoiceBox fx:id="alvosChoiceBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="editor-buttons" />
+                  <ChoiceBox fx:id="alcanceChoiceBox11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="editor-buttons" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" layoutX="26.0" layoutY="205.0" prefHeight="40.0" prefWidth="960.0" spacing="70.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="180.0" styleClass="label-layout" text="CUSTO" />
+                  <Label alignment="CENTER" prefWidth="180.0" styleClass="label-layout" text="DANO" />
+                  <Label alignment="CENTER" prefWidth="180.0" styleClass="label-layout" text="VIDA" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="26.0" layoutY="225.0" prefHeight="90.0" prefWidth="960.0" spacing="70.0">
+               <children>
+                  <ChoiceBox fx:id="raridadeChoiceBox11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="180.0" styleClass="editor-buttons" />
+                  <ChoiceBox fx:id="alcanceChoiceBox11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="editor-buttons" />
+                  <ChoiceBox fx:id="alcanceChoiceBox111" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="editor-buttons" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="26.0" layoutY="327.0" prefHeight="90.0" prefWidth="960.0" spacing="70.0">
+               <children>
+                  <ChoiceBox fx:id="raridadeChoiceBox111" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="180.0" styleClass="editor-buttons" />
+                  <ChoiceBox fx:id="alcanceChoiceBox111" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="editor-buttons" />
+                  <ChoiceBox fx:id="alcanceChoiceBox1111" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="editor-buttons" />
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" layoutX="26.0" layoutY="307.0" prefHeight="40.0" prefWidth="960.0" spacing="16.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="180.0" styleClass="label-layout" text="DANO /S" />
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="298.0" styleClass="label-layout" text="VELOCIDADE DE IMPACTO" />
+                  <Label alignment="CENTER" prefWidth="180.0" styleClass="label-layout" text="IMAGEM" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</AnchorPane>

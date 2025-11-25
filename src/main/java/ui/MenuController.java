@@ -26,10 +26,18 @@ public class MenuController {
     }
 
     public void mudarParaDecks(javafx.event.ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/FXML/colecao.fxml"));
-        Scene colecaoScene = new Scene(root);
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/decks.fxml"));
+        Scene decksScene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(colecaoScene);
+        stage.setScene(decksScene);
+        stage.show();
+    }
+
+    public void mudarParaStudio(javafx.event.ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/studio.fxml"));
+        Scene decksScene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(decksScene);
         stage.show();
     }
 }
