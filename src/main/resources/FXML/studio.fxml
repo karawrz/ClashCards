@@ -55,9 +55,14 @@
             <Font name="Rockwell Extra Bold" size="38.0" />
          </font>
       </Label>
-      <HBox layoutX="120.0" layoutY="71.0" prefHeight="46.0" prefWidth="960.0" spacing="700.0">
+      <HBox layoutX="120.0" layoutY="71.0" prefHeight="46.0" prefWidth="960.0" spacing="755.0">
          <children>
             <Button mnemonicParsing="false" onAction="#trocarParaMenu" prefHeight="55.0" prefWidth="138.0" styleClass="voltar-layout" text="voltar">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="138.0" styleClass="voltar-layout" text="SALVAR">
                <font>
                   <Font size="15.0" />
                </font>
@@ -95,7 +100,11 @@
                <children>
                   <ChoiceBox fx:id="velocidadeChoiceBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="180.0" styleClass="editor-buttons" />
                   <ChoiceBox fx:id="alvosChoiceBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="editor-buttons" />
-                  <ChoiceBox fx:id="alcanceChoiceBox11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="editor-buttons" />
+                  <TextField fx:id="nivelTextField" prefHeight="50.0" prefWidth="180.0" promptText="Digite o nível" styleClass="editor-buttons">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
                </children>
             </HBox>
             <HBox alignment="BOTTOM_CENTER" layoutX="26.0" layoutY="205.0" prefHeight="40.0" prefWidth="960.0" spacing="70.0">
@@ -107,16 +116,40 @@
             </HBox>
             <HBox alignment="CENTER" layoutX="26.0" layoutY="225.0" prefHeight="90.0" prefWidth="960.0" spacing="70.0">
                <children>
-                  <ChoiceBox fx:id="raridadeChoiceBox11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="180.0" styleClass="editor-buttons" />
-                  <ChoiceBox fx:id="alcanceChoiceBox11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="editor-buttons" />
-                  <ChoiceBox fx:id="alcanceChoiceBox111" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="editor-buttons" />
+                  <TextField fx:id="custoTextField" prefHeight="50.0" prefWidth="180.0" promptText="Digite o custo" styleClass="editor-buttons">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="danoTextField" prefHeight="50.0" prefWidth="180.0" promptText="Digite o dano" styleClass="editor-buttons">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="vidaTextField" prefHeight="50.0" prefWidth="180.0" promptText="Digite a vida" styleClass="editor-buttons">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
                </children>
             </HBox>
             <HBox alignment="CENTER" layoutX="26.0" layoutY="327.0" prefHeight="90.0" prefWidth="960.0" spacing="70.0">
                <children>
-                  <ChoiceBox fx:id="raridadeChoiceBox111" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="180.0" styleClass="editor-buttons" />
-                  <ChoiceBox fx:id="alcanceChoiceBox111" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="editor-buttons" />
-                  <ChoiceBox fx:id="alcanceChoiceBox1111" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="180.0" styleClass="editor-buttons" />
+                  <TextField fx:id="danoPSTextField" prefHeight="50.0" prefWidth="180.0" promptText="Digite o dano/s" styleClass="editor-buttons">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="velocidadeDeImpactoTextField" prefHeight="50.0" prefWidth="180.0" promptText="Digite a VDI" styleClass="editor-buttons">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="urlTextField" prefHeight="50.0" prefWidth="180.0" promptText="Caminho da imagem" styleClass="editor-buttons">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
                </children>
             </HBox>
             <HBox alignment="BOTTOM_CENTER" layoutX="26.0" layoutY="307.0" prefHeight="40.0" prefWidth="960.0" spacing="16.0">
