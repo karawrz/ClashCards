@@ -2,8 +2,10 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -76,7 +78,8 @@
             </FlowPane>
          </content>
       </ScrollPane>
-      <HBox layoutX="647.0" layoutY="128.0" prefHeight="140.0" prefWidth="446.0" spacing="8.0">
+      <FlowPane fx:id="containerDecks" layoutX="647.0" layoutY="169.0" prefHeight="288.0" prefWidth="469.0" />
+      <HBox layoutX="648.0" layoutY="169.0" prefHeight="140.0" prefWidth="446.0" spacing="8.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="3.0" width="111.0">
                <fill>
@@ -236,7 +239,7 @@
             </Rectangle>
          </children>
       </HBox>
-      <HBox layoutX="647.0" layoutY="277.0" prefHeight="140.0" prefWidth="446.0" spacing="8.0">
+      <HBox layoutX="647.0" layoutY="316.0" prefHeight="140.0" prefWidth="468.0" spacing="8.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="3.0" width="111.0">
                <fill>
@@ -396,7 +399,7 @@
             </Rectangle>
          </children>
       </HBox>
-      <AnchorPane layoutX="647.0" layoutY="431.0" prefHeight="46.0" prefWidth="469.0">
+      <AnchorPane layoutX="647.0" layoutY="469.0" prefHeight="46.0" prefWidth="469.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="43.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" strokeWidth="3.0" width="469.0">
                <fill>
@@ -463,12 +466,62 @@
                   <ColorAdjust brightness="-0.14" hue="-0.56" />
                </effect>
             </ImageView>
-            <Label fx:id="custoMedioContainer" layoutX="34.0" layoutY="11.0" prefHeight="20.0" prefWidth="39.0" textAlignment="CENTER" textFill="WHITE">
+            <Label fx:id="elixirMedioLabel" layoutX="34.0" layoutY="11.0" prefHeight="20.0" prefWidth="39.0" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Arial Black" size="15.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="641.0" layoutY="98.0" strokeType="INSIDE" strokeWidth="8.0" width="482.0">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.8222748815165877" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.45614033937454224" blue="0.8552631735801697" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+         <stroke>
+            <RadialGradient centerX="0.5359116022099448" centerY="0.48578199052132703" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="0.45614033937454224" blue="0.8552631735801697" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </stroke>
+      </Rectangle>
+      <ComboBox fx:id="meusDecksComboBox" layoutX="660.0" layoutY="113.0" prefWidth="150.0" />
+      <TextField fx:id="nomeDeckField" layoutX="930.0" layoutY="113.0" maxWidth="200.0" prefHeight="31.0" prefWidth="178.0" text="Digite o nome do Deck aqui">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnSalvarDeck" layoutX="641.0" layoutY="523.0" mnemonicParsing="false" onAction="#salvarDeck" prefHeight="46.0" prefWidth="124.0" styleClass="voltar-layout" text="salvar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="1019.0" layoutY="523.0" mnemonicParsing="false" onAction="#excluirDeckAtual" prefHeight="46.0" prefWidth="124.0" styleClass="voltar-layout" text="apagar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

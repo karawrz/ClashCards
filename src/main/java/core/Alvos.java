@@ -4,4 +4,5 @@ public enum Alvos{
     Aereo,
     Terrestre,
     Construcao,
+    Multiplos,
 }

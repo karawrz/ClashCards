@@ -11,7 +11,6 @@ module ClashCards {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
-    requires com.opencsv;
     requires javafx.graphics;
     requires javafx.base;
 

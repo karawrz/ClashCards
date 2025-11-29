@@ -20,7 +20,6 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
@@ -38,15 +37,27 @@ public class CartasController {
     private void carregarCartas(){
         fileReader fr = new fileReader();
         this.listaColecao = fr.lerCartas();
+        
+        // Depuração simples para ver se carregou algo
+        if (this.listaColecao == null || this.listaColecao.isEmpty()) {
+            System.out.println("AVISO: Nenhuma carta foi carregada do arquivo CSV ou o arquivo não foi encontrado.");
+        } else {
+            System.out.println("Sucesso: " + this.listaColecao.size() + " cartas carregadas.");
+        }
     }
 
     private void updategrid(){
         containerCartas.getChildren().clear();
 
-        if(listaColecao != null){
+        if(listaColecao != null && !listaColecao.isEmpty()){
             for(Carta carta : listaColecao){
                 containerCartas.getChildren().add(criarVisual(carta));
             }
+        } else {
+            // Opcional: Mostrar uma mensagem na interface se não houver cartas
+            javafx.scene.control.Label emptyLabel = new javafx.scene.control.Label("Nenhuma carta encontrada na coleção.");
+            emptyLabel.setStyle("-fx-text-fill: white; -fx-font-size: 14px;");
+            containerCartas.getChildren().add(emptyLabel);
         }
     }
 
@@ -68,13 +79,30 @@ public class CartasController {
 
         if (caminhoImg != null && !caminhoImg.isEmpty()) {
             try {
+                // Lógica melhorada de carregamento
+                Image img = null;
+                
+                // 1. Tenta achar arquivo direto (caminho absoluto ou na raiz)
                 java.io.File arquivo = new java.io.File(caminhoImg);
-
-
                 if (arquivo.exists()) {
-                    Image img = new Image(arquivo.toURI().toString());
-                    ImageView view = new ImageView(img);
+                    img = new Image(arquivo.toURI().toString());
+                } else {
+                    // 2. Se falhar, tenta achar dentro dos resources (pasta images padrão)
+                    // Ajuste o "/images/" se sua pasta tiver outro nome
+                    java.net.URL resourceUrl = getClass().getResource("/images/" + caminhoImg);
+                    if (resourceUrl != null) {
+                        img = new Image(resourceUrl.toExternalForm());
+                    } else {
+                        // 3. Tenta na raiz dos resources
+                        resourceUrl = getClass().getResource("/" + caminhoImg);
+                        if (resourceUrl != null) {
+                            img = new Image(resourceUrl.toExternalForm());
+                        }
+                    }
+                }
 
+                if (img != null) {
+                    ImageView view = new ImageView(img);
 
                     view.setFitWidth(100);
                     view.setFitHeight(100);
@@ -84,6 +112,8 @@ public class CartasController {
                     btnCarta.setText(carta.getNome());
                     btnCarta.setContentDisplay(ContentDisplay.TOP);
                     imagemCarregada = true;
+                } else {
+                    System.out.println("Imagem não encontrada em lugar nenhum: " + caminhoImg);
                 }
             } catch (Exception e) {
                 System.out.println("Erro ao carregar imagem: " + e.getMessage());
@@ -123,8 +153,9 @@ public class CartasController {
 
                 data.fileWriter escritor = new data.fileWriter();
 
-                if (escritor.removerLinha(carta.getNome(), "Cards.csv")) {
+                if (escritor.removerLinha(carta.getNome(), "cartas.csv")) {
                     listaColecao.remove(carta);
+                    updategrid(); // Adicione esta linha para atualizar a tela
                 } else {
                     mostrarAlerta("Erro", "Não foi possível apagar do arquivo.");
                 }

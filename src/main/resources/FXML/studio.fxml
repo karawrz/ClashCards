@@ -62,7 +62,7 @@
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="138.0" styleClass="voltar-layout" text="SALVAR">
+            <Button mnemonicParsing="false" onAction="#salvar" prefHeight="55.0" prefWidth="138.0" styleClass="voltar-layout" text="SALVAR">
                <font>
                   <Font size="15.0" />
                </font>
@@ -140,7 +140,7 @@
                         <Font size="17.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="velocidadeDeImpactoTextField" prefHeight="50.0" prefWidth="180.0" promptText="Digite a VDI" styleClass="editor-buttons">
+                  <TextField fx:id="velocidadeImpactoTextField" prefHeight="50.0" prefWidth="180.0" promptText="Digite a VDI" styleClass="editor-buttons">
                      <font>
                         <Font size="17.0" />
                      </font>

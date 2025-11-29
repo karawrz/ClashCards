@@ -1,0 +1,4 @@
+nome,nivel,custo,raridade,imagem,dano,danoPS,vida,alvos,alcance,velocidade,velocidadeDeImpacto
+Mini Pekka,10,4,Comum,minipekka.png,1,1,1,Terrestre,fisicoProximo,Lenta,1.2
+Cavaleiro,10,6,Rara,cavaleiro.png,2,2,2,Terrestre,fisicoProximo,Lenta,1.2
+Arqueiras,11,8,Comum,arqueiras.png,3,3,3,Terrestre,fisicoProximo,Lenta,1.2

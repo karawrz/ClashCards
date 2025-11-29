@@ -91,3 +91,14 @@
     -fx-background : transparent;
     -fx-border-color: transparent;
 }
+
+.info-carta {
+    -fx-font-family: "SuperCell-Magic";
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-background-color: midnightblue;
+    -fx-border-color: lightblue;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-width: 8px;
+}

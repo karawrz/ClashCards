@@ -18,9 +18,8 @@ import java.io.IOException;
 public class StudioController {
     @FXML private TextField nomeTextField;
     @FXML private TextField urlTextField;
-    @FXML private TextField elixirTextField;
-    @FXML private int vidaTextField;
-    @FXML private int danoTextField;
+    @FXML private TextField vidaTextField;
+    @FXML private TextField danoTextField;
     @FXML private TextField nivelTextField;
     @FXML private TextField custoTextField;
     @FXML private TextField danoPSTextField;
@@ -47,18 +46,17 @@ public class StudioController {
             fileWriter fw = new fileWriter();
 
             String nome = nomeTextField.getText();
-            String alvos = alvosChoiceBox.getValue().toString();
+            Alvos alvos = alvosChoiceBox.getValue();
             String url = urlTextField.getText();
-            String alcance = alcanceChoiceBox.getValue().toString();
-            String velocidade = velocidadeChoiceBox.getValue().toString();
-            String elixir = elixirTextField.getText();
-            int vida = vidaTextField;
-            int dano = danoTextField;
-            String nivel = nivelTextField.getText();
-            String custo = custoTextField.getText();
-            String danoPS = danoPSTextField.getText();
-            String velocidadeImpacto = velocidadeImpactoTextField.getText();
-            String raridade = raridadeChoiceBox.getValue().toString();
+            Alcance alcance = alcanceChoiceBox.getValue();
+            Velocidade velocidade = velocidadeChoiceBox.getValue();
+            int vida = Integer.parseInt(vidaTextField.getText());
+            int dano = Integer.parseInt(danoTextField.getText());
+            int nivel = Integer.parseInt(nivelTextField.getText());
+            int custo = Integer.parseInt(custoTextField.getText());
+            double danoPS = Double.parseDouble(danoPSTextField.getText());
+            double velocidadeImpacto = Double.parseDouble(velocidadeImpactoTextField.getText());
+            Raridade raridade = raridadeChoiceBox.getValue();
 
             Carta carta = new Carta();
             carta.setNome(nome);
@@ -70,12 +68,28 @@ public class StudioController {
             carta.setNivel(nivel);
             carta.setVida(vida);
             carta.setAlcance(alcance);
-            carta.setCusto(elixir);
             carta.setImagem(url);
             carta.setDanoPS(danoPS);
-    }
+            carta.setCusto(custo);
 
-    @FXML
+            //salva a carta e emite uma mensagem caso tudo de certo, ou não
+            if(fw.escreverCarta(carta.toCVS())){
+                System.out.println("Carta criada: " + nome);
+                avisarErro("Sucesso", "Carta salva com sucesso!");
+                limpar();
+            }else{
+                System.out.println("Erro ao salvar carta!");
+                avisarErro("Erro", "Erro ao salvar carta!");
+            }
+
+        } catch (NumberFormatException e) {
+            avisarErro("Erro de Formatação", "Por favor, verifique se os campos numéricos contêm apenas números.");
+        } catch (Exception e) {
+            avisarErro("Erro ao Salvar", "Ocorreu um erro ao tentar salvar a carta: " + e.getMessage());
+        }
+    }
+        
+        
     public void trocarParaMenu(ActionEvent event) throws IOException { //troca a cena para o menu
 
         Parent menuRoot = FXMLLoader.load(getClass().getResource("/fxml/inicioMenu.fxml"));
@@ -87,7 +101,6 @@ public class StudioController {
     private void limpar(){
         nomeTextField.clear();
         urlTextField.clear();
-        elixirTextField.clear();
         vidaTextField.clear();
         danoTextField.clear();
         nivelTextField.clear();
